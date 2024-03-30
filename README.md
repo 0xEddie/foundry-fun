@@ -19,3 +19,11 @@ Check that `.env` is in the `.gitignore` then add the first anvil private key, a
 PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
 RPC_URL=http://127.0.0.1:8545
 ```
+
+### Fast Local Testing
+In one shell run `anvil`
+
+In a second shell run
+```sh
+forge script script/DeployScript.s.sol --rpc-url $RPC_URL --broadcast --private-key $PRIVATE_KEY
+```
